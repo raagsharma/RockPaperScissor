@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Rock, Paper, Scissors</title>
+  </head>
+
+  <body>
+    <div id="root">
+      <main>
+        <section id="score-board">
+          <div id="score-board-left">
+            <p>ROCK</p>
+            <p>PAPER</p>
+            <p>SCISSORS</p>
+          </div>
+          <div id="score-board-right">
+            <div class="score-card">
+              <p class="score-card-title">COMPUTER <br />SCORE</p>
+              <p id="computer-score" class="score-card-points">0</p>
+            </div>
+            <div class="score-card">
+              <p class="score-card-title">
+                YOUR <br />
+                SCORE
+              </p>
+              <p id="your-score" class="score-card-points">0</p>
+            </div>
+          </div>
+        </section>
+        <section id="playground">
+          <div id="start-area">
+            <div class="triangle">
+              <svg height="250" width="350">
+                <polygon
+                  points="0,8 350,8 175,250"
+                  style="fill: transparent; stroke: #000000a3; stroke-width: 15"
+                />
+              </svg>
+            </div>
+            <div id="start-area-first">
+              <div id="rock-btn" class="choices-btn" name="rock">
+                <img src="./images/rock.png" alt="rock" />
+              </div>
+              <div id="scissors-btn" class="choices-btn" name="scissors">
+                <img src="./images/scissors.png" alt="rock" />
+              </div>
+            </div>
+            <div id="start-area-end">
+              <div id="paper-btn" class="choices-btn" name="paper">
+                <img src="./images/paper.png" alt="rock" />
+              </div>
+            </div>
+          </div>
+          <div id="play-area">
+            <div id="play-area-header">
+              <p>YOU PICKED</p>
+              <p>PC PICKED</p>
+            </div>
+            <div id="play-area-main">
+              <div id="rock-btn" class="choices-btn">
+                <img src="./images/rock.png" alt="rock" />
+              </div>
+              <div id="play-area-main-middle">
+                <div id="play-area-main-text">
+                  <p>YOU WIN</p>
+                  <span>AGAINST PC</span>
+                </div>
+                <button class="play-again-btn" class="hidden">
+                  PLAY AGAIN
+                </button>
+              </div>
+              <div id="scissors-btn" class="choices-btn">
+                <img src="./images/scissors.png" alt="rock" />
+              </div>
+            </div>
+          </div>
+          <div id="win-area">
+            <img src="./images/Group 5.svg" alt="Trophy" />
+            <h1>HURRAY!!</h1>
+            <h2>YOU WON THE GAME</h2>
+            <button class="play-again-btn">PLAY AGAIN</button>
+          </div>
+        </section>
+      </main>
+      <div id="rules-board" class="hidden">
+        <button id="rules-board-close-btn">X</button>
+        <p id="rules-board-title">Game Rules</p>
+        <ul id="rules-list">
+          <li class="rules-list-item">
+            Rock beats scissors, scissors beat paper, and paper beats rock.
+          </li>
+          <li class="rules-list-item">
+            Agree ahead of time whether you’ll count off “rock, paper, scissors,
+            shoot” or just “rock, paper, scissors.”
+          </li>
+          <li class="rules-list-item">
+            Use rock, paper, scissors to settle minor decisions or simply play
+            to pass the time
+          </li>
+          <li class="rules-list-item">
+            If both players lay down the same hand, each player lays down
+            another hand
+          </li>
+        </ul>
+      </div>
+      <button id="rules-btn" class="bottom-btn">RULES</button>
+      <button id="next-btn" class="bottom-btn">NEXT</button>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
